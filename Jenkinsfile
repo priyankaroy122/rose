@@ -54,6 +54,7 @@ pipeline {
         archiveArtifacts artifacts: 'output.txt', fingerprint: true
       }
     }
+  }
     post {
       always {
         echo "Build finished: ${currentBuild.currentResult}"
