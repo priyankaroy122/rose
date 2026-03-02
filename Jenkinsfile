@@ -1,10 +1,10 @@
-git checkout main
-cat > Jenkinsfile << 'EOF'
+//git checkout main
+//cat > Jenkinsfile << 'EOF'
 pipeline {
   agent any
   options {
     //keep builds for 30 days, optional
-    buildDiscarder(log Rotator(daysToKeepStr: '30'))
+    buildDiscarder(logRotator(daysToKeepStr: '30'))
     timestamps()
   }
   parameters {
@@ -36,7 +36,7 @@ pipeline {
       steps {
         echo "Hello ${params.NAME}"
         //run your demo script (make sure its executable)
-        sh 'if [-f app.sh]; then bash app.sh; else echo "no app.sh found"; fi'
+        sh 'if [ -f app.sh ]; then bash app.sh; else echo "no app.sh found"; fi'
       }
     }
     stage('Create artifact') {
