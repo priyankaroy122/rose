@@ -67,7 +67,7 @@ pipeline {
       }
     }
   }
-  EOF
+//EOF
 
   git add Jenkinsfile
   git commit -m "chore: add Jenkinsfile for CI demo"
