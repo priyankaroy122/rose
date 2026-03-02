@@ -69,7 +69,7 @@ pipeline {
   }
 //EOF
 
-  git add Jenkinsfile
-  git commit -m "chore: add Jenkinsfile for CI demo"
-  git push origin main
+ // git add Jenkinsfile
+ // git commit -m "chore: add Jenkinsfile for CI demo"
+ // git push origin main
         
